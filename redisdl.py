@@ -128,7 +128,7 @@ def client(host='localhost', port=6379, password=None, db=0,
 def dumps(host='localhost', port=6379, password=None, db=0, pretty=False,
           unix_socket_path=None, encoding='utf-8', keys='*', secure=True):
     r = client(host=host, port=port, password=password, db=db,
-               unix_socket_path=unix_socket_path, encoding=encoding, secure=True)
+               unix_socket_path=unix_socket_path, encoding=encoding, secure=secure)
     kwargs = {}
     if not pretty:
         kwargs['separators'] = (',', ':')
